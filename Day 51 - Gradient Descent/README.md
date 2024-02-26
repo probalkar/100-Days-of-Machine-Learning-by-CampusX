@@ -4,11 +4,11 @@ Gradient descent is an optimization algorithm used to minimize the cost or loss 
 
 ### Mathematical Formulation:
 
-In simple linear regression, the objective is to minimize the mean squared error (MSE) between the predicted ($\hat{Y}_i$) and actual ($Y_i$) values of the response variable:
-$$ \text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (Y_i - \hat{Y}_i)^2 $$
+In simple linear regression, the objective is to minimize the mean squared error (MSE) between the predicted ($`\hat{Y}_i`$) and actual ($Y_i$) values of the response variable:
+$`$` \text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (Y_i - \hat{Y}_i)^2 `$`$
 
 To achieve this, we define a cost function $J(m, b)$ that represents the MSE:
-$$ J(m, b) = \frac{1}{2n} \sum_{i=1}^{n} (Y_i - (mx_i + b))^2 $$
+$`$` J(m, b) = \frac{1}{2n} \sum_{i=1}^{n} (Y_i - (mx_i + b))^2 `$`$
 
 Where:
 - $m$ is the slope,
@@ -27,13 +27,13 @@ Gradient descent updates the parameters ($m$ and $b$) iteratively in the directi
 
 2. **Compute Gradients:**
    - Compute the partial derivatives of the cost function $J(m, b)$ with respect to $m$ and $b$:
-   $$ \frac{\partial J}{\partial m} = -\frac{1}{n} \sum_{i=1}^{n} x_i (Y_i - (mx_i + b)) $$
-   $$ \frac{\partial J}{\partial b} = -\frac{1}{n} \sum_{i=1}^{n} (Y_i - (mx_i + b)) $$
+   $`$` \frac{\partial J}{\partial m} = -\frac{1}{n} \sum_{i=1}^{n} x_i (Y_i - (mx_i + b)) `$`$
+   $`$` \frac{\partial J}{\partial b} = -\frac{1}{n} \sum_{i=1}^{n} (Y_i - (mx_i + b)) `$`$
 
 3. **Update Parameters:**
    - Update the parameters $m$ and $b$ using the gradients and a learning rate ($\alpha$):
-   $$ m := m - \alpha \frac{\partial J}{\partial m} $$
-   $$ b := b - \alpha \frac{\partial J}{\partial b} $$
+   $`$` m := m - \alpha \frac{\partial J}{\partial m} `$`$
+   $`$` b := b - \alpha \frac{\partial J}{\partial b} `$`$
 
 4. **Iterate:**
    - Repeat steps 2 and 3 until the cost function converges to a minimum or a predefined number of iterations is reached.
